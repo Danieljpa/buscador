@@ -1,21 +1,7 @@
  let inputbuscar = document.getElementById("inputbuscar");
  let btnbuscar =document.getElementById("btnbuscar");
  let url = "https://jsonplaceholder.typicode.com/posts";
- let ocultartabla = document.querySelectorAll(".tabla");
- 
- function ocultar()
-{
-    let ocultartabla = document.querySelector(".tabla");
-    let tr = document.querySelectorAll(".tabla .contenido tr");
-
-    //if(tr.length >0)
-    //{
-    //    ocultartabla.style.display = "table";
-   // }
-   // else
-      //  ocultartabla.style.display = "none";
-}
-ocultar();
+ let tcompleta = document.querySelector(".tcompleta");
 
 btnbuscar.onclick = function(e)
  {
@@ -24,7 +10,7 @@ btnbuscar.onclick = function(e)
     .then(datos => mostrar(datos))
     .catch(error => console.log(error))
     contenido.innerHTML =  "";
-    
+    tcompleta.style.display = "block";
 } 
 
 function mostrar(datos)
