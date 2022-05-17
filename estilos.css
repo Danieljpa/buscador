@@ -1,0 +1,150 @@
+html
+{
+    font-family: sans-serif;
+}
+.conteiner
+{
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.tabla #head tr
+{
+    background-color: #8f96a3;
+    color: white;
+    height: 40px;
+    text-align: center;
+}
+
+.tabla #contenido tr td
+{
+    border-bottom: 1px solid #00000021;
+    padding: 7px 15px;
+    text-align: left;
+}  
+
+.tcompleta
+{
+    background-color: #c1cad5;
+    margin: 20px;
+}
+
+.buscador
+{
+    background-color: #4862932b;
+    display: flex;
+    justify-content: center;
+    padding: 8px 5px;
+    margin: 5px;
+    gap: 10px;
+    border: 1px solid rgb(203 194 194);
+    border-radius: 10px;
+    width: 250px;
+    height: 30px;
+
+}
+
+.buscador #inputbuscar
+{
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    border: 1px solid rgb(185 180 180);
+    background-color: #dddddd;
+}
+
+.buscador #btnbuscar
+{
+    border-radius: 8px;
+    background-color: #18b3b3;
+    border: 1px solid rgb(227, 227, 227);
+}
+
+
+
+svg
+{
+    fill: black;
+}
+
+.darkmode
+{
+    background-color: #353b46;
+    color: #2e2626;
+}
+
+.theme
+{
+    margin: 4px 14px;
+    position: fixed;
+    right: 1em;
+}
+.theme .dark
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: none;
+    
+}
+
+.theme .light
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+#buttondark
+{
+    background-color: #acb4c1;
+    display: flex;
+    gap:  10px;
+    border-radius: 10px;
+    height: 24px;
+    width: 60px;
+    border: none;
+    border-color: gray;
+}
+
+#buttondark:after
+{
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 22px;
+    background-color: rgb(241 241 241);
+    border-radius: 40%;
+    left: 3px;   
+    bottom: 1px;
+    transition: all ease-in-out .3s;
+}
+
+.darkmode .buscador #inputbuscador
+{
+    background-color: #c1c7d5;
+}
+
+.darkmode #buttondark:after
+{
+    left: 28px;
+}
+
+.darkmode #buttondark
+{
+    background-color: #18b3b3;
+}
+.darkmode .tabla #head tr
+{
+    background-color: #4f5a6e;
+    color: white;
+}
+
+.darkmode .tabla #contenido
+{
+    background-color: #c1c7d5;
+}
