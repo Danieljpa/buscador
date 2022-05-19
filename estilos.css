@@ -39,7 +39,7 @@ html
     background-color: #4862932b;
     display: flex;
     justify-content: center;
-    padding: 8px 5px;
+    padding: 5px 5px;
     margin: 15px 10px 5px 5px;
     gap: 10px;
     border: 1px solid rgb(203 194 194);
@@ -51,26 +51,18 @@ html
 
 .buscador #inputbuscar
 {
+    width: 250px;
     border-radius: 10px;
     padding: 10px;
     color: black;
     border: 1px solid rgb(185 180 180);
-    background-color: #cfdaeb;
+    background-color: #18b3b3;
 }
 
 ::placeholder
 {
     color: black;
 }
-
-.buscador #btnbuscar
-{
-    border-radius: 8px;
-    background-color: #18b3b3;
-    border: 1px solid rgb(227, 227, 227);
-}
-
-
 
 svg
 {

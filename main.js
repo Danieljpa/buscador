@@ -2,23 +2,26 @@
  let btnbuscar =document.getElementById("btnbuscar");
  let url = "https://jsonplaceholder.typicode.com/posts";
  let tcompleta = document.querySelector(".tcompleta");
+ let data = [];
 
-btnbuscar.onclick = function(e)
- {
-  fetch(url)
+function traertabla()
+{
+    fetch(url)
     .then(response => response.json())
     .then(datos => mostrar(datos))
     .catch(error => console.log(error))
     contenido.innerHTML =  "";
     tcompleta.style.display = "block";
-} 
+}
+
 
 function mostrar(datos)
 {
+    data=datos;
     contenido.innerhtml= "";
-    let ndatos = datos.filter(dato => dato.userId == inputbuscar.value);
     
-        for( let valor of ndatos)
+    
+        for( let valor of datos)
         {
             contenido.innerHTML +=  "<tr>"+"<td>"+valor.userId+"</td>"+"<td>"+valor.id+"</td>"+"<td>"+valor.title+"</td>"+"<td>"+valor.body+"</td>"+"</tr>";
         }
@@ -44,3 +47,18 @@ if(localStorage.getItem("darkmode") === "true")
 }
 else
     body.classList.remove("darkmode");
+traertabla();
+
+inputbuscar.addEventListener("keyup", function()
+{
+    
+    let ndatos = data.filter(dato => dato.title.includes(inputbuscar.value));
+    contenido.innerHTML= "";
+    console.log(ndatos);
+    for( let valor of ndatos)
+        {
+            //contenido.innerHTML +=  "<tr>"+"<td>"+valor.userId+"</td>"+"<td>"+valor.id+"</td>"+"<td>"+valor.title+"</td>"+"<td>"+valor.body+"</td>"+"</tr>";
+            contenido.innerHTML += `<tr><td>${valor.userId}</td><td>${valor.id}</td><td>${valor.title}</td><td>${valor.body}</td></tr>`;
+        }
+    
+});
